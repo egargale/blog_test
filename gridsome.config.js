@@ -54,6 +54,54 @@ module.exports = {
           }
         }
       }
+    },
+    // {
+    //   use: 'gridsome-plugin-rss',
+    //   options: {
+    //     contentTypeName: 'Blog',
+    //     latest: true,
+    //     maxItems: 1000,
+    //     feedOptions: {
+    //       title: 'Your Website Name RSS',
+    //       feed_url: 'https://yourwebsite.com/rss.xml',
+    //       site_url: 'https://yourwebsite.com'
+    //     },
+    //     feedItemOptions: post => ({
+    //       title: post.title,
+    //       description: post.description,
+    //       url: 'https://yourwebsite.com/' + post.slug
+    //     }),
+    //     output: {
+    //       dir: './static',
+    //       name: 'rss.xml'
+    //     }
+    //   }
+    // }
+    {
+      use: 'gridsome-plugin-feed',
+      options: {
+        // Required: array of `GraphQL` type names you wish to include
+        contentTypes: ['Blog'],
+        // Optional: any properties you wish to set for `Feed()` constructor
+        // See https://www.npmjs.com/package/feed#example for available properties
+        feedOptions: {
+          title: 'My Awesome Blog Feed',
+          description: 'Best blog feed evah.'
+        },
+        // === All options after this point show their default values ===
+        // Optional; opt into which feeds you wish to generate, and set their output path
+        rss: {
+          enabled: true,
+          output: '/rss.xml'
+        },
+        // Optional: the maximum number of items to include in your feed
+        maxItems: 25,
+        filterNodes: (node) => true,
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          content: node.content
+        })
+      }
     }
   ],
   transformers: {

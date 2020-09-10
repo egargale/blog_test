@@ -1,41 +1,46 @@
-<div align="center">
+# Gridsome Casper V3 Starter
 
-<a href="https://www.jammeryhq.com" title="JammeryHQ" target="_blank">
+Grisome starter based on [Ghost Casper V3](https://github.com/TryGhost/Casper) and tailwindcss.
 
-  <img src="https://jammeryhq.com/jammeryhq.png" width="128" />
-  
-</a>
+## Demo
+[https://gridsome-starter-casper-v3.now.sh/](https://gridsome-starter-casper-v3.now.sh/)
 
-<p>
-Fast-track your JAMstack development & learning
-</p>
-</div>
+## Features
 
-<hr />
-
-# About the starter
-
-Gridsome starter based on the Casper theme for Ghost. Content is added via markdown, while Tailwind CSS is used for the layout/styling.
-
-## Key features
-
-* Built with Tailwind CSS
-* Responsive 
-* Blog
-* Author pages
+* Gridsome
+* Tailwindcss with some custom configuration
+  * tailwindcss tables plugin
+* Light and Dark Mode with auto detect  
+* v-tooltip
+* SCSS
+* Markdown
 * Tags
 * Categories
-* Dynamic custom pages
+* Author Pages
+* Blog
+* About Page
 * Pagination
 
-## Installation
+## Plugins
 
-Run the following command to create a new gridsome project 
+With Gridsome offering a plugin-rich ecosystem, there are a few key plugins that make this project possible. 
 
-```
-gridsome create my-blog https://github.com/jammeryhq/gridsome-starter-casper-v3
-```
+- [Gridsome Source Filesystem](https://gridsome.org/plugins/@gridsome/source-filesystem) Transform files into content that can be fetched with GraphQL in your components.
+- [gridsome-source-static-meta](https://gridsome.org/plugins/gridsome-source-static-meta) source plugin that converts values in JSON and/or YAML files into keys on the global GraphQL metaData query.
+- [gridsome-remark-classes](https://gridsome.org/plugins/@noxify/gridsome-remark-classes) Gridsome Remark plugin to add css classes to any element
+- [gridsome-remark-table-align](https://gridsome.org/plugins/@noxify/gridsome-remark-table-align) Gridsome Remark plugin move the `table` align defintion to the `tableCell` definition.
 
-## Credits
 
-This starter is based on [Ghost Casper V3](https://github.com/TryGhost/Casper).
+
+## Install
+
+### 1. Install Gridsome CLI tool if you don't have
+
+`npm install --global @gridsome/cli`
+
+### 2. Create a Gridsome project
+
+1. `gridsome create my-blog https://github.com/noxify/gridsome-starter-casper-v3` to install gridsome with this starter
+2. `cd my-blog` to open the folder
+3. `gridsome develop` to start a local dev server at `http://localhost:8080`
+4. Happy coding 🎉🙌
