@@ -113,7 +113,10 @@ module.exports = {
           'tableCell[align=center]': 'text-center',
           'tableCell[align=right]': 'text-right'
         }]
-      ]
+      ],
+      config: {
+        footnotes: true
+      }
     }
   },
   templates: {

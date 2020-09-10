@@ -24,4 +24,6 @@ gramine missisque leonibus.
 > freta miram enim, maiorque nec nec inaniter mensura et ipse artus flebam
 > gentisque solus.
 
-test
+**test**
+
+![Beautiful View](http://unsplash.it/400?random&gravity=center)
