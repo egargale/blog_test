@@ -12,7 +12,7 @@
 
 query($page:Int) {
 
-  entries: allBlog(perPage: 9, page: $page) @paginate {
+  entries: allBlog(sortBy: "datetime", order: DESC, perPage: 3, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages
@@ -50,7 +50,7 @@ import PostListItem from '~/components/PostListItem.vue';
 
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "Blog Posts"
   },
   components: {
     PostListItem
