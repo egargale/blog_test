@@ -4,7 +4,7 @@ tags: musica
 category: Digital
 excerpt: Kosmo Spacca dovete sentirla.
 created: 2020-09-11
-image: http://unsplash.it/800?random&gravity=center
+image: http://unsplash.it/1600?random&gravity=center
 image_caption: Photo by Steven Wong on Unsplash
 author: author4
 ---
